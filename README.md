@@ -14,18 +14,18 @@ Os principais benefícios da Clean Architecture são:
 Essas características tornam a Clean Architecture uma escolha sólida para projetos, fornecendo uma estrutura bem definida que promove a qualidade do código, a facilidade de manutenção e a evolução contínua do sistema.
 
 # Estrutura de Pastas
-A divisão primaria 
+
 ##  Frontend
 * Domain (models): Dentro da pasta domain, você pode criar arquivos com funções TypeScript que lidam com a validação de campos obrigatórios, tipos de dados e outras regras de negócio. Essas funções podem receber dados de entrada e aplicar as validações necessárias, retornando os resultados ou lançando exceções em caso de falha.
     * UseCases: Como no backend, os UseCases são os responsáveis pelas regras do negócio. Armazena as funções que ditam como cada função da aplicação deve funcionar.
-    * repositories: Comunicação direta com o backend.
+    * Repositories: No contexto frontend, os repositórios são responsáveis pela comunicação com o backend, trazendo e enviando dados.
 
 
 * views (User Interface): Essa pasta representa a camada de interface do usuário. Ela contém componentes reutilizáveis, páginas da aplicação e arquivos de estilos globais. Aqui é onde a interação direta com o usuário ocorre.
     * pages
     * components
     * styles
-
+    * assets
 
 ## Backend 
 * Entities (Core): Essa camada contém as entidades de negócio e as regras de negócio centrais do sistema. Ela encapsula a lógica de domínio, como validações, cálculos e comportamentos essenciais para o funcionamento do negócio. Essa camada é a mais interna e não depende das outras camadas.
